@@ -1,0 +1,38 @@
+PODS:
+  - CTMediator (32)
+  - WDY_PersonInfo_Kit (0.1.0):
+    - WDY_PersonPreference_Kit
+  - WDY_PersonPreference_Kit (0.1.0):
+    - CTMediator
+
+DEPENDENCIES:
+  - CTMediator
+  - WDY_PersonInfo_Kit (from `https://github.com/WDYKitOrganization/WDY_PersonInfo_Kit.git`)
+  - WDY_PersonPreference_Kit (from `https://github.com/WDYKitOrganization/WDY_PersonPreference_Kit.git`)
+
+SPEC REPOS:
+  trunk:
+    - CTMediator
+
+EXTERNAL SOURCES:
+  WDY_PersonInfo_Kit:
+    :git: https://github.com/WDYKitOrganization/WDY_PersonInfo_Kit.git
+  WDY_PersonPreference_Kit:
+    :git: https://github.com/WDYKitOrganization/WDY_PersonPreference_Kit.git
+
+CHECKOUT OPTIONS:
+  WDY_PersonInfo_Kit:
+    :commit: a63b2a9d36dba5bff7632432dad817c5d5f56845
+    :git: https://github.com/WDYKitOrganization/WDY_PersonInfo_Kit.git
+  WDY_PersonPreference_Kit:
+    :commit: 6b38ca86e04a950b0e90abae334954626270b985
+    :git: https://github.com/WDYKitOrganization/WDY_PersonPreference_Kit.git
+
+SPEC CHECKSUMS:
+  CTMediator: 10f2c387be0ab2061b75b88c86f9903eedba1ce8
+  WDY_PersonInfo_Kit: 5526bbd856431bd4b13ae05f333e0392166b1bf0
+  WDY_PersonPreference_Kit: 6517a2f89285322ed3fa9475f9141397d61cdcd4
+
+PODFILE CHECKSUM: 365bb86c8e1c011c1cce2a8cff049710ff3a9f55
+
+COCOAPODS: 1.9.2

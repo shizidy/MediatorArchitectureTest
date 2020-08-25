@@ -11,7 +11,7 @@
 
 NSString * const kCTMediatorParamsKeySwiftTargetModuleName = @"kCTMediatorParamsKeySwiftTargetModuleName";
 
-@interface CTMediator () <NSCopying, NSMutableCopying>
+@interface CTMediator ()
 
 @property (nonatomic, strong) NSMutableDictionary *cachedTarget;
 
@@ -19,26 +19,14 @@ NSString * const kCTMediatorParamsKeySwiftTargetModuleName = @"kCTMediatorParams
 
 @implementation CTMediator
 
-static CTMediator *mediator;
-static dispatch_once_t onceToken;
-
 #pragma mark - public methods
-+ (instancetype)sharedInstance {
-    return [[self alloc] init];
-}
-
-+ (instancetype)allocWithZone:(struct _NSZone *)zone {
++ (instancetype)sharedInstance
+{
+    static CTMediator *mediator;
+    static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        mediator = [super allocWithZone:zone];
+        mediator = [[CTMediator alloc] init];
     });
-    return mediator;
-}
-
-- (id)copyWithZone:(NSZone *)zone {
-    return mediator;
-}
-
-- (id)mutableCopyWithZone:(NSZone *)zone {
     return mediator;
 }
 
@@ -49,7 +37,8 @@ static dispatch_once_t onceToken;
  aaa://targetA/actionB?id=1234
  */
 
-- (id)performActionWithUrl:(NSURL *)url completion:(void (^)(NSDictionary *))completion {
+- (id)performActionWithUrl:(NSURL *)url completion:(void (^)(NSDictionary *))completion
+{
     if (url == nil) {
         return nil;
     }
@@ -80,7 +69,8 @@ static dispatch_once_t onceToken;
     return result;
 }
 
-- (id)performTarget:(NSString *)targetName action:(NSString *)actionName params:(NSDictionary *)params shouldCacheTarget:(BOOL)shouldCacheTarget {
+- (id)performTarget:(NSString *)targetName action:(NSString *)actionName params:(NSDictionary *)params shouldCacheTarget:(BOOL)shouldCacheTarget
+{
     if (targetName == nil || actionName == nil) {
         return nil;
     }
@@ -130,7 +120,8 @@ static dispatch_once_t onceToken;
     }
 }
 
-- (void)releaseCachedTargetWithFullTargetName:(NSString *)fullTargetName {
+- (void)releaseCachedTargetWithFullTargetName:(NSString *)fullTargetName
+{
     /*
      fullTargetName在oc环境下，就是Target_XXXX。要带上Target_前缀。在swift环境下，就是XXXModule.Target_YYY。不光要带上Target_前缀，还要带上模块名。
      */
@@ -141,7 +132,8 @@ static dispatch_once_t onceToken;
 }
 
 #pragma mark - private methods
-- (void)NoTargetActionResponseWithTargetString:(NSString *)targetString selectorString:(NSString *)selectorString originParams:(NSDictionary *)originParams {
+- (void)NoTargetActionResponseWithTargetString:(NSString *)targetString selectorString:(NSString *)selectorString originParams:(NSDictionary *)originParams
+{
     SEL action = NSSelectorFromString(@"Action_response:");
     NSObject *target = [[NSClassFromString(@"Target_NoTargetAction") alloc] init];
     
@@ -153,7 +145,8 @@ static dispatch_once_t onceToken;
     [self safePerformAction:action target:target params:params];
 }
 
-- (id)safePerformAction:(SEL)action target:(NSObject *)target params:(NSDictionary *)params {
+- (id)safePerformAction:(SEL)action target:(NSObject *)target params:(NSDictionary *)params
+{
     NSMethodSignature* methodSig = [target methodSignatureForSelector:action];
     if(methodSig == nil) {
         return nil;
@@ -220,7 +213,8 @@ static dispatch_once_t onceToken;
 }
 
 #pragma mark - getters and setters
-- (NSMutableDictionary *)cachedTarget {
+- (NSMutableDictionary *)cachedTarget
+{
     if (_cachedTarget == nil) {
         _cachedTarget = [[NSMutableDictionary alloc] init];
     }

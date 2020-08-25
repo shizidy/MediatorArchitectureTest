@@ -9,7 +9,10 @@
 #import "ViewController.h"
 #import "UIView+LayoutMethods.h"
 #import "CTMediator+CTMediatorModuleAActions.h"
+//#import "CTMediator+PersonInfo.h"
+#import <WDY_PersonInfo_Kit/CTMediator+PersonInfo.h>
 #import "TableViewController.h"
+#import <CTMediator+HandyTools.h>
 
 NSString * const kCellIdentifier = @"kCellIdentifier";
 
@@ -25,7 +28,9 @@ NSString * const kCellIdentifier = @"kCellIdentifier";
 #pragma mark - life cycle
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    /*
+     pod spec lint WDY_PersonInfo_Kit.podspec --verbose --allow-warnings --sources='https://github.com/CocoaPods/Specs.git,https://github.com/WDYKitOrganization/WDYPersonSpecs.git'
+     */
     [self.view addSubview:self.tableView];
 }
 
@@ -84,6 +89,11 @@ NSString * const kCellIdentifier = @"kCellIdentifier";
     if (indexPath.row == 6) {
         [[CTMediator sharedInstance] performTarget:@"InvalidTarget" action:@"InvalidAction" params:nil shouldCacheTarget:NO];
     }
+    
+    if (indexPath.row == 7) {
+        UIViewController *con = [[CTMediator sharedInstance] personInfoWithName:@"寒江" age:18];
+        [self.navigationController pushViewController:con animated:YES];
+    }
 }
 
 #pragma mark - getters and setters
@@ -106,7 +116,8 @@ NSString * const kCellIdentifier = @"kCellIdentifier";
                         @"present image when error",
                         @"show alert",
                         @"table view cell",
-                        @"No Target-Action response"
+                        @"No Target-Action response",
+                        @"Person Info"
                         ];
     }
     return _dataSource;

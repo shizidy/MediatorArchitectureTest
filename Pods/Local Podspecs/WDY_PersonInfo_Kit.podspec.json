@@ -1,0 +1,27 @@
+{
+  "name": "WDY_PersonInfo_Kit",
+  "version": "0.1.0",
+  "summary": "A short description of WDY_PersonInfo_Kit.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/WDYKitOrganization/WDY_PersonInfo_Kit",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "shizidy": "shizizuo1990"
+  },
+  "source": {
+    "git": "https://github.com/WDYKitOrganization/WDY_PersonInfo_Kit.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "WDY_PersonInfo_Kit/Classes/**/*",
+  "dependencies": {
+    "WDY_PersonPreference_Kit": [
+
+    ]
+  }
+}

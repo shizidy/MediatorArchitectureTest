@@ -27,8 +27,7 @@
     [self.view addSubview:self.closeButton];
 }
 
-- (void)viewWillLayoutSubviews
-{
+- (void)viewWillLayoutSubviews {
     [super viewWillLayoutSubviews];
     
     [self.tableView fillWidth];
@@ -40,40 +39,34 @@
     [self.closeButton bottomInContainer:0 shouldResize:YES];
 }
 
-- (void)dealloc
-{
+- (void)dealloc {
     // 在Controller被回收的时候，把相关的target也回收掉
     [[CTMediator sharedInstance] CTMediator_cleanTableViewCellTarget];
 }
 
 #pragma mark - UITableViewDelegate
-- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
-{
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
     // 通过Mediator来获取cell实例，由于target已经被cache了，高频调用不是问题。
     [[CTMediator sharedInstance] CTMediator_configTableViewCell:cell withTitle:@"cell title" atIndexPath:indexPath];
 }
 
 #pragma mark - UITableViewDataSource
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return 100;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     // 通过mediator来配置cell实例，由于target已经被cache了，高频调用不是问题。
     return [[CTMediator sharedInstance] CTMediator_tableViewCellWithIdentifier:@"cell" tableView:tableView];
 }
 
 #pragma mark - event response
-- (void)didTappedCloseButton:(UIButton *)button
-{
+- (void)didTappedCloseButton:(UIButton *)button {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 #pragma mark - getters and setters
-- (UITableView *)tableView
-{
+- (UITableView *)tableView {
     if (_tableView == nil) {
         _tableView = [[UITableView alloc] init];
         _tableView.delegate = self;
@@ -82,8 +75,7 @@
     return _tableView;
 }
 
-- (UIButton *)closeButton
-{
+- (UIButton *)closeButton {
     if (_closeButton == nil) {
         _closeButton = [UIButton buttonWithType:UIButtonTypeCustom];
         [_closeButton setTitle:@"Close" forState:UIControlStateNormal];

@@ -18,12 +18,12 @@
 		74D27A59248A48B800AFB24A /* MediatorArchitectureTestUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 74D27A58248A48B800AFB24A /* MediatorArchitectureTestUITests.m */; };
 		74D27A6B248A4AB100AFB24A /* UIView+LayoutMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = 74D27A67248A4AB100AFB24A /* UIView+LayoutMethods.m */; };
 		74D27A6C248A4AB100AFB24A /* UIView+HandyAutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 74D27A68248A4AB100AFB24A /* UIView+HandyAutoLayout.m */; };
-		74D27A72248A4B2400AFB24A /* CTMediator+HandyTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 74D27A6E248A4B2400AFB24A /* CTMediator+HandyTools.m */; };
-		74D27A73248A4B2400AFB24A /* CTMediator.m in Sources */ = {isa = PBXBuildFile; fileRef = 74D27A6F248A4B2400AFB24A /* CTMediator.m */; };
 		74D27A7A248A4BD400AFB24A /* Target_A.m in Sources */ = {isa = PBXBuildFile; fileRef = 74D27A77248A4BD400AFB24A /* Target_A.m */; };
 		74D27A7B248A4BD400AFB24A /* DemoModuleADetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74D27A79248A4BD400AFB24A /* DemoModuleADetailViewController.m */; };
 		74D27A7F248A4BFC00AFB24A /* CTMediator+CTMediatorModuleAActions.m in Sources */ = {isa = PBXBuildFile; fileRef = 74D27A7E248A4BFC00AFB24A /* CTMediator+CTMediatorModuleAActions.m */; };
 		74D27A82248A4CBD00AFB24A /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74D27A80248A4CBD00AFB24A /* TableViewController.m */; };
+		74FF489A24923B320092F35D /* UIImage+wgBundle.m in Sources */ = {isa = PBXBuildFile; fileRef = 74FF489924923B320092F35D /* UIImage+wgBundle.m */; };
+		8D64A002964100F5831B724E /* libPods-MediatorArchitectureTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D137925573F4C2B600A37063 /* libPods-MediatorArchitectureTest.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4DDEF2798BDAE289E3A8A698 /* Pods-MediatorArchitectureTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MediatorArchitectureTest.debug.xcconfig"; path = "Target Support Files/Pods-MediatorArchitectureTest/Pods-MediatorArchitectureTest.debug.xcconfig"; sourceTree = "<group>"; };
 		74D27A2E248A48B600AFB24A /* MediatorArchitectureTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MediatorArchitectureTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74D27A31248A48B600AFB24A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		74D27A32248A48B600AFB24A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -66,10 +67,6 @@
 		74D27A68248A4AB100AFB24A /* UIView+HandyAutoLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+HandyAutoLayout.m"; sourceTree = "<group>"; };
 		74D27A69248A4AB100AFB24A /* UIView+HandyAutoLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+HandyAutoLayout.h"; sourceTree = "<group>"; };
 		74D27A6A248A4AB100AFB24A /* UIView+LayoutMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+LayoutMethods.h"; sourceTree = "<group>"; };
-		74D27A6E248A4B2400AFB24A /* CTMediator+HandyTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CTMediator+HandyTools.m"; sourceTree = "<group>"; };
-		74D27A6F248A4B2400AFB24A /* CTMediator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTMediator.m; sourceTree = "<group>"; };
-		74D27A70248A4B2400AFB24A /* CTMediator+HandyTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CTMediator+HandyTools.h"; sourceTree = "<group>"; };
-		74D27A71248A4B2400AFB24A /* CTMediator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTMediator.h; sourceTree = "<group>"; };
 		74D27A75248A4BD400AFB24A /* DemoModuleADetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoModuleADetailViewController.h; sourceTree = "<group>"; };
 		74D27A77248A4BD400AFB24A /* Target_A.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Target_A.m; sourceTree = "<group>"; };
 		74D27A78248A4BD400AFB24A /* Target_A.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Target_A.h; sourceTree = "<group>"; };
@@ -78,6 +75,10 @@
 		74D27A7E248A4BFC00AFB24A /* CTMediator+CTMediatorModuleAActions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CTMediator+CTMediatorModuleAActions.m"; sourceTree = "<group>"; };
 		74D27A80248A4CBD00AFB24A /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
 		74D27A81248A4CBD00AFB24A /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
+		74FF489824923B320092F35D /* UIImage+wgBundle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+wgBundle.h"; sourceTree = "<group>"; };
+		74FF489924923B320092F35D /* UIImage+wgBundle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+wgBundle.m"; sourceTree = "<group>"; };
+		D137925573F4C2B600A37063 /* libPods-MediatorArchitectureTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MediatorArchitectureTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF2777311914FE3DC3A93909 /* Pods-MediatorArchitectureTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MediatorArchitectureTest.release.xcconfig"; path = "Target Support Files/Pods-MediatorArchitectureTest/Pods-MediatorArchitectureTest.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D64A002964100F5831B724E /* libPods-MediatorArchitectureTest.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,6 +107,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		25276CEC44DED1B6C94400AF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4DDEF2798BDAE289E3A8A698 /* Pods-MediatorArchitectureTest.debug.xcconfig */,
+				DF2777311914FE3DC3A93909 /* Pods-MediatorArchitectureTest.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		74D27A25248A48B600AFB24A = {
 			isa = PBXGroup;
 			children = (
@@ -112,6 +123,8 @@
 				74D27A4C248A48B800AFB24A /* MediatorArchitectureTestTests */,
 				74D27A57248A48B800AFB24A /* MediatorArchitectureTestUITests */,
 				74D27A2F248A48B600AFB24A /* Products */,
+				25276CEC44DED1B6C94400AF /* Pods */,
+				F9B998CDA87EA7F5843F41EE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -130,7 +143,6 @@
 			children = (
 				74D27A7C248A4BFC00AFB24A /* ModuleA */,
 				74D27A74248A4BD400AFB24A /* DemoModule */,
-				74D27A6D248A4ACC00AFB24A /* Mediator */,
 				74D27A66248A49A700AFB24A /* Categorys */,
 				74D27A31248A48B600AFB24A /* AppDelegate.h */,
 				74D27A32248A48B600AFB24A /* AppDelegate.m */,
@@ -170,23 +182,14 @@
 		74D27A66248A49A700AFB24A /* Categorys */ = {
 			isa = PBXGroup;
 			children = (
+				74FF489824923B320092F35D /* UIImage+wgBundle.h */,
+				74FF489924923B320092F35D /* UIImage+wgBundle.m */,
 				74D27A69248A4AB100AFB24A /* UIView+HandyAutoLayout.h */,
 				74D27A68248A4AB100AFB24A /* UIView+HandyAutoLayout.m */,
 				74D27A6A248A4AB100AFB24A /* UIView+LayoutMethods.h */,
 				74D27A67248A4AB100AFB24A /* UIView+LayoutMethods.m */,
 			);
 			path = Categorys;
-			sourceTree = "<group>";
-		};
-		74D27A6D248A4ACC00AFB24A /* Mediator */ = {
-			isa = PBXGroup;
-			children = (
-				74D27A71248A4B2400AFB24A /* CTMediator.h */,
-				74D27A6F248A4B2400AFB24A /* CTMediator.m */,
-				74D27A70248A4B2400AFB24A /* CTMediator+HandyTools.h */,
-				74D27A6E248A4B2400AFB24A /* CTMediator+HandyTools.m */,
-			);
-			path = Mediator;
 			sourceTree = "<group>";
 		};
 		74D27A74248A4BD400AFB24A /* DemoModule */ = {
@@ -217,6 +220,14 @@
 			path = ModuleA;
 			sourceTree = "<group>";
 		};
+		F9B998CDA87EA7F5843F41EE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D137925573F4C2B600A37063 /* libPods-MediatorArchitectureTest.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -224,6 +235,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 74D27A5D248A48B800AFB24A /* Build configuration list for PBXNativeTarget "MediatorArchitectureTest" */;
 			buildPhases = (
+				7AB76C755ACBDAC2D3BFD025 /* [CP] Check Pods Manifest.lock */,
 				74D27A2A248A48B600AFB24A /* Sources */,
 				74D27A2B248A48B600AFB24A /* Frameworks */,
 				74D27A2C248A48B600AFB24A /* Resources */,
@@ -342,22 +354,46 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7AB76C755ACBDAC2D3BFD025 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MediatorArchitectureTest-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		74D27A2A248A48B600AFB24A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				74D27A7F248A4BFC00AFB24A /* CTMediator+CTMediatorModuleAActions.m in Sources */,
+				74FF489A24923B320092F35D /* UIImage+wgBundle.m in Sources */,
 				74D27A7B248A4BD400AFB24A /* DemoModuleADetailViewController.m in Sources */,
 				74D27A39248A48B600AFB24A /* ViewController.m in Sources */,
 				74D27A6B248A4AB100AFB24A /* UIView+LayoutMethods.m in Sources */,
 				74D27A6C248A4AB100AFB24A /* UIView+HandyAutoLayout.m in Sources */,
-				74D27A73248A4B2400AFB24A /* CTMediator.m in Sources */,
 				74D27A7A248A4BD400AFB24A /* Target_A.m in Sources */,
 				74D27A82248A4CBD00AFB24A /* TableViewController.m in Sources */,
 				74D27A33248A48B600AFB24A /* AppDelegate.m in Sources */,
 				74D27A44248A48B800AFB24A /* main.m in Sources */,
-				74D27A72248A4B2400AFB24A /* CTMediator+HandyTools.m in Sources */,
 				74D27A36248A48B600AFB24A /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -525,6 +561,7 @@
 		};
 		74D27A5E248A48B800AFB24A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4DDEF2798BDAE289E3A8A698 /* Pods-MediatorArchitectureTest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -542,6 +579,7 @@
 		};
 		74D27A5F248A48B800AFB24A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DF2777311914FE3DC3A93909 /* Pods-MediatorArchitectureTest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
